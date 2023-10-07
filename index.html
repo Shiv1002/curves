@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curvy Natures</title>
+    <link rel="icon" href="favicon.svg">
+    
+    <style>
+        @font-face {
+            font-family: 'Playfair-BlackItalic';
+            src: url('Playfair_Display/static/PlayfairDisplay-BlackItalic.ttf');
+        }
+
+        @font-face {
+            font-family: 'Playfair-SemiBold';
+            src: url('Playfair_Display/static/PlayfairDisplay-SemiBold.ttf');
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+
+        section h1 {
+            font-size: xxx-large;
+            font-family: 'Playfair-BlackItalic', sans-serif;
+        }
+
+        section p {
+            font-size: large;
+            font-family: 'Playfair-SemiBold', sans-serif;
+            padding: 0 4rem;
+        }
+
+        .red {
+            background: RED;
+
+        }
+
+        .black {
+            background-color: black;
+        }
+
+        .pink {
+            background-color: #ffc0cb;
+        }
+
+        .blue {
+            background-color: #001829;
+        }
+
+        .voilet {
+            background-color: violet;
+        }
+
+        .hotpink {
+            background-color: FF0066;
+        }
+
+        .spacer {
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            /* margin: 1rem 0; */
+        }
+
+        .layer1 {
+            background-image: url('./red-stacked-curves.svg');
+            aspect-ratio: 1800/500;
+        }
+
+        .layer2 {
+            background-image: url('/pink-layerd-curves.svg');
+            aspect-ratio: 960/300;
+        }
+
+        .layer3-convex {
+            height: 300px;
+            border-radius: 70%;
+            translate: 0rem -6rem;
+            width: 100%;
+            background-color: #001829;
+
+        }
+
+        .layer3-concave {
+            height: 200px;
+            border-radius: 50%;
+            translate: 0rem 6rem;
+            width: 100%;
+            background-color: #001829;
+            z-index: 2;
+
+        }
+
+        .layer4 {
+            padding: 6rem 0;
+            background-image: url('voilet-blue-curve.svg');
+        }
+
+        .layer5_1 {
+            aspect-ratio: 900/300;
+            background-image: url('voilet-pink-curve.svg');
+        }
+        .layer5_2{
+            aspect-ratio: 900/300;
+            background-image: url('voilet-pink-curve_2.svg');
+        }
+
+        .layer6 {
+            background-image: url('red-dots.svg');
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="red">
+        <h1>Curvy Background</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, natus inventore nisi sed dolores amet
+            repudiandae expedita sit, deleniti vel veniam!</p>
+    </section>
+    <div class="spacer layer1"></div>
+    <section class="black">
+
+        <h1>Curvy Background</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, natus inventore nisi sed dolores amet
+            repudiandae expedita sit, deleniti vel veniam!</p>
+
+    </section>
+    <div class="spacer layer2"></div>
+    <section class="pink">
+
+        <h1>Curvy Background</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, natus inventore nisi sed dolores amet
+            repudiandae expedita sit, deleniti vel veniam!</p>
+
+    </section>
+
+
+
+    <section class="blue ">
+        <div class="layer3-convex blue"></div>
+        <h1>Curvy Background</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, natus inventore nisi sed dolores amet
+            repudiandae expedita sit, deleniti vel veniam!</p>
+
+        <div class="layer3-concave blue"></div>
+    </section>
+    <div class="layer4 spacer"></div>
+    <section class="voilet">
+
+        <h1>Curvy Background</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, natus inventore nisi sed dolores amet
+            repudiandae expedita sit, deleniti vel veniam!</p>
+
+    </section>
+    <div id="layer1" class="layer5_1 spacer"></div>
+    <div id="layer2" class="layer5_2 spacer"></div>
+    <section class="voilet layer6 spacer">
+
+        <h1>Curvy Background</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, natus inventore nisi sed dolores amet
+            repudiandae expedita sit, deleniti vel veniam!</p>
+
+    </section>
+    <section class="pink">
+
+        <h1>Curvy Background</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, natus inventore nisi sed dolores amet
+            repudiandae expedita sit, deleniti vel veniam!</p>
+
+    </section>
+    <section class="black">
+
+        <h1>Curvy Background</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, natus inventore nisi sed dolores amet
+            repudiandae expedita sit, deleniti vel venia
+
+        </p>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
+    <script>
+        var tween = KUTE.to('#layer1', { path: '#layer2' });
+        tween.start()
+    </script>
+</body>
+
+</html>
