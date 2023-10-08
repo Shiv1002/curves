@@ -8,6 +8,7 @@
     <link rel="icon" href="favicon.svg">
     
     <style>
+
         @font-face {
             font-family: 'Playfair-BlackItalic';
             src: url('Playfair_Display/static/PlayfairDisplay-BlackItalic.ttf');
@@ -20,6 +21,7 @@
 
         body {
             margin: 0;
+            background-color: black;
             overflow-x: hidden;
         }
 
@@ -37,6 +39,7 @@
         section h1 {
             font-size: xxx-large;
             font-family: 'Playfair-BlackItalic', sans-serif;
+            text-align: center;
         }
 
         section p {
@@ -80,11 +83,14 @@
         .layer1 {
             background-image: url('./red-stacked-curves.svg');
             aspect-ratio: 1800/500;
+            background-color: rgb(0, 0, 0) !important;
+            
         }
 
         .layer2 {
-            background-image: url('/pink-layerd-curves.svg');
-            aspect-ratio: 960/300;
+            background-image: url('pink-layered-curves.svg');
+            aspect-ratio: 960/600;
+            background-color: #000000;
         }
 
         .layer3-convex {
@@ -93,6 +99,7 @@
             translate: 0rem -6rem;
             width: 100%;
             background-color: #001829;
+            margin: 3rem 0;
 
         }
 
@@ -103,7 +110,7 @@
             width: 100%;
             background-color: #001829;
             z-index: 2;
-
+            padding: 3rem 0;
         }
 
         .layer4 {
@@ -123,11 +130,12 @@
         .layer6 {
             background-image: url('red-dots.svg');
         }
+        
     </style>
 </head>
 
 <body>
-
+<input type="color" onchange="changeCol()">
 
     <section class="red">
         <h1>Curvy Background</h1>
@@ -195,8 +203,12 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
     <script>
-        var tween = KUTE.to('#layer1', { path: '#layer2' });
-        tween.start()
+        // var tween = KUTE.to('#layer1', { path: '#layer2' });
+//         // tween.start()
+// alert(window.matchMedia('(prefers-color-scheme: dark)').matches)
+function changeCol(){
+    document.querySelector('')
+}
     </script>
 </body>
 
